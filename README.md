@@ -25,3 +25,7 @@ This repository contains a Python implementation of the classic strategy board g
 3. Choose level (Easy - Medium - Hard).
 4. Follow the on-screen instructions to make your moves.
 5. Enjoy playing Othello and challenge yourself against the computer's Alpha-Beta algorithm!
+
+![Levels](images/img0.png)
+![Game Start:](images/img1.png)
+![](images/img2.png)
