@@ -208,6 +208,7 @@ class Board:
             return outFlankedList
 
         # Check horizontally
+        # Moving Right
         newList = []
         for tempCol in range(col + 1, COLS):
             newList.append(self.board[row][tempCol])
@@ -223,6 +224,7 @@ class Board:
                 outFlankedList.extend(newList)
                 break
 
+        # Moving Left
         newList = []
         for tempCol in range(col - 1, -1, -1):
 
@@ -240,6 +242,7 @@ class Board:
                 break
 
         # Check vertically
+        # Moving Down
         newList = []
         for tempRow in range(row + 1, ROWS):
 
@@ -255,6 +258,7 @@ class Board:
                 outFlankedList.extend(newList)
                 break
 
+        # Moving Up
         newList = []
         for tempRow in range(row - 1, -1, -1):
             newList.append(self.board[tempRow][col])

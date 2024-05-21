@@ -87,20 +87,21 @@ def main():
     menu_running = True
     while menu_running:
         for event in pygame.event.get():
-                       
+            #if wana exist the game   
             if event.type == pygame.QUIT:
                 pygame.quit()
                 sys.exit()
-            
+            #if find winner set findWin to true to stop the game and 
             elif game.board.findWinner():
                   game.findWin = True
-                                                  
+
+            #if the current player doesnot have any moves to make                                      
             elif game.board.getAllValidMoves(game.turn) == [] and game.findWin == False:
                 game.takeTurns()
-
+            #if it is the computer's turn make computer plays
             elif  game.turn == WHITE and game.findWin == False:
                 game.computerMove(row, col)
-                        
+            # if the player click on any cell on the board            
             elif event.type == pygame.MOUSEBUTTONDOWN and game.findWin == False:
                 mouse_pos = pygame.mouse.get_pos()
                                
